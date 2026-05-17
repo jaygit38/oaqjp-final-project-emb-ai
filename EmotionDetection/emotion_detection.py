@@ -36,7 +36,7 @@ def emotion_detector(text_to_analyze):
         fear_score = None
         joy_score = None
         sadness_score = None
-        
+
 	# Return the label and score in a dictionary
     return {
         'anger': anger_score,
@@ -44,5 +44,5 @@ def emotion_detector(text_to_analyze):
         'fear': fear_score,
         'joy': joy_score,
         'sadness': sadness_score,
-        'dominant_emotion': '<name of the dominant emotion>'
+        'dominant_emotion': dominant_emotion
     }
