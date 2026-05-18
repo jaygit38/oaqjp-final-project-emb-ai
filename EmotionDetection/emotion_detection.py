@@ -20,6 +20,14 @@ def emotion_detector(text_to_analyze):
         fear_score = formatted_response['emotionPredictions'][0]['emotion']['fear']
         joy_score = formatted_response['emotionPredictions'][0]['emotion']['joy']
         sadness_score = formatted_response['emotionPredictions'][0]['emotion']['sadness']
+    # If the response status code is 400, set to None
+    elif response.status_code == 400:
+        dominant_emotion = None
+        anger_score = None
+        disgust_score = None
+        fear_score = None
+        joy_score = None
+        sadness_score = None
     # If the response status code is 500, set to None
     elif response.status_code == 500:
         dominant_emotion = None
